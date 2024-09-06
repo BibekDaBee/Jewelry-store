@@ -86,3 +86,11 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
             cartSidebar.classList.remove('open');
         });
     });
+
+    function openNav() {
+        document.getElementById("sidebarNav").style.width = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("sidebarNav").style.width = "0";
+    }
