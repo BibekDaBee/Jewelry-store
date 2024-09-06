@@ -14,21 +14,15 @@
     
     <section class="header-main">
         <header>
-            <div>
-                <span class="hamburger" onclick="openNav()">&#9776;</span>
-            </div>
+            <div class="hamburger" id="open-sidebar">&#9776;</div>
             <div class="header-center">
                 <img src="Image/website_logo.png" alt="Website Logo" class="logo">
                 <h1>Key Gold</h1>
             </div>
             <div class="header-right">
-                <img src="Image/search-icon.png" alt="Search" class="search-icon" id="search-icon">
-                <div class="search-bar" id="search-bar">
-                    <input type="text" placeholder="Search for items">
-                </div>
                 <img src="Image/cart-icon.png" alt="Cart" class="cart-icon" id="cart-icon">
             </div>
-            
+
             <!-- Cart Sidebar -->
             <div class="cart-sidebar" id="cart-sidebar">
                 <div class="cart-content">
@@ -40,11 +34,20 @@
                 </div>
             </div>
         </header>
+
+        <!-- Search Bar Section -->
+        <div class="search-bar-section">
+            <div class="search-bar" id="search-bar">
+                <input type="text" placeholder="Search for items">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+
         <hr class="separator">
     </section>
 
-    <!-- Sidebar Menu -->
-    <div id="sidebarNav" class="sidebar">
+     <!-- Sidebar Menu -->
+     <div id="sidebarNav" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#home">Home</a>
         <a href="#shop">Shop</a>
