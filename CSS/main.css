@@ -31,6 +31,8 @@ header {
     text-align: center;
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .logo {
@@ -426,6 +428,26 @@ footer {
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .header-center {
+        flex: 1;
+        display: flex;
+        justify-content: center; /* Center the logo */
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Push the cart icon to the far right */
     }
 }
 
