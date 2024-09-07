@@ -4,44 +4,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartIcon = document.getElementById("cart-icon");
     const cartSidebar = document.getElementById("cart-sidebar");
     const closeCartBtn = document.getElementById("close-cart");
-    const openSidebarBtn = document.getElementById("open-sidebar"); // Hamburger menu
-    const sidebarNav = document.getElementById("sidebarNav"); // Sidebar navigation
+    const openSidebarBtn = document.getElementById("open-sidebar");
+    const sidebarNav = document.getElementById("sidebarNav");
 
     // Toggle search bar
-    if (searchIcon) {
+    if (searchIcon && searchBar) {
         searchIcon.addEventListener("click", function () {
             searchBar.classList.toggle("open");
         });
     }
 
     // Toggle cart sidebar
-    if (cartIcon) {
+    if (cartIcon && cartSidebar) {
         cartIcon.addEventListener("click", function () {
             cartSidebar.classList.toggle("open");
         });
     }
 
     // Close cart sidebar
-    if (closeCartBtn) {
+    if (closeCartBtn && cartSidebar) {
         closeCartBtn.addEventListener("click", function () {
             cartSidebar.classList.remove("open");
         });
     }
 
-    // Toggle sidebar navigation (hamburger menu)
-    if (openSidebarBtn) {
+    // Toggle sidebar navigation
+    if (openSidebarBtn && sidebarNav) {
         openSidebarBtn.addEventListener("click", function () {
-            sidebarNav.style.width = "250px"; // Open sidebar
+            sidebarNav.classList.toggle("open");
         });
     }
 
     // Close sidebar navigation
     if (sidebarNav) {
         sidebarNav.querySelector(".closebtn").addEventListener("click", function () {
-            sidebarNav.style.width = "0"; // Close sidebar
+            sidebarNav.classList.remove("open");
         });
     }
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const promoImage = document.getElementById('promo-image');
     const promoImages = ['Image/ring1.png', 'Image/ring2.jpg', 'Image/ring3.jpg'];
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 const cartItemsList = document.getElementById('cart-items');
+const cartSidebar = document.getElementById('cart-sidebar');
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', function () {
@@ -71,6 +73,7 @@ addToCartButtons.forEach(button => {
 
         // Create a new cart item
         const cartItem = document.createElement('li');
+        cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
             <img src="${productImage}" alt="${productName}" class="cart-item-image">
             <div>
@@ -104,6 +107,8 @@ addToCartButtons.forEach(button => {
         });
 
         // Ensure the cart sidebar stays open when an item is added
-        cartSidebar.classList.add('open');
+        if (cartSidebar) {
+            cartSidebar.classList.add('open');
+        }
     });
 });

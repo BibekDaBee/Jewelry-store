@@ -12,6 +12,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-top {
@@ -52,8 +54,7 @@ header {
 
 .search-bar-section {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .search-bar {
@@ -98,6 +99,10 @@ header {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.sidebar.open {
+    width: 250px; /* Adjusted for consistency */
+}
+
 .sidebar a {
     padding: 10px 15px;
     text-decoration: none;
@@ -117,14 +122,8 @@ header {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-.hamburger {
-    font-size: 30px;
     cursor: pointer;
-    display: block;
-    margin-right: 20px;
-    color: black;
+    color: white;
 }
 
 /* Cart Sidebar */
@@ -146,7 +145,7 @@ header {
 }
 
 /* Cart Content */
-.cart-content ul{
+.cart-content ul {
     list-style-type: none;
     padding: 16px;
     display: flex;
@@ -398,7 +397,6 @@ footer {
     }
 }
 
-/* For mobile screens */
 @media (max-width: 480px) {
     .cart-item-image {
         width: 20vw; /* Larger size for mobile screens */
