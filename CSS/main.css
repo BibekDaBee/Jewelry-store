@@ -425,6 +425,10 @@ footer {
         align-items: center;
         margin-left: auto; /* Push the cart icon to the far right */
     }
+
+    .product {
+        width: calc(50% - 20px); /* 2 products per row on tablets and small screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -439,7 +443,7 @@ footer {
     }
 
     .product {
-        width: calc(100% - 20px);
+        width: calc(50% - 20px); /* Ensure 2 products per row on small screens */
     }
 
     .promoContent {
