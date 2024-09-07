@@ -27,12 +27,13 @@ header {
     background-color: white;
 }
 
+/* Centered logo */
 .header-center {
     text-align: center;
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    justify-content: center;
+    flex: 1; /* Allows this section to grow and center the logo */
+    justify-content: center; /* Centers logo horizontally */
 }
 
 .logo {
@@ -46,6 +47,7 @@ header {
     align-items: center;
 }
 
+/* Icons */
 .search-icon,
 .cart-icon {
     width: 30px;
@@ -408,40 +410,14 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .promoContent {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .imageContent {
-        text-align: center;
-    }
-
-    .product {
-        width: calc(50% - 20px);
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-direction: row; /* Keep items in a single line */
+        align-items: center; /* Align items vertically center */
     }
 
     .header-center {
-        flex: 1;
         display: flex;
-        justify-content: center; /* Center the logo */
+        flex: 1;
+        justify-content: center; /* Center the logo horizontally */
     }
 
     .header-right {
@@ -452,27 +428,22 @@ footer {
 }
 
 @media (max-width: 480px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .promoContent {
-        flex-direction: column;
-    }
-
-    .product {
-        width: calc(100% - 20px);
-    }
-
     .header-center {
-        flex-direction: column;
+        flex-direction: column; /* Stack items in column on very small screens */
     }
 
     .search-icon,
     .cart-icon {
         width: 25px;
         height: 25px;
+    }
+
+    .product {
+        width: calc(100% - 20px);
+    }
+
+    .promoContent {
+        flex-direction: column;
     }
 }
 
