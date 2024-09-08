@@ -547,3 +547,55 @@ footer p {
     margin-top: 20px; /* Add spacing between text and other content */
     font-size: 0.9em; /* Slightly smaller font for subtlety */
 }
+
+/* Cart Icon Container */
+#cart-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #e8e4e4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#cart-icon-container:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+}
+
+#cart-icon {
+    width: 40px; /* Size of the cart icon */
+    height: auto;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 5px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #cart-icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    #cart-icon {
+        width: 30px;
+    }
+}

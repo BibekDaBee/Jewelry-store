@@ -20,7 +20,13 @@
                 <h1>Key Gold</h1>
             </div>
             <div class="header-right">
-                <img src="Image/cart-icon.png" alt="Cart" class="cart-icon" id="cart-icon">
+                <img src="Image/cart-icon.png" alt="Cart" class="cart-icon" id="header-cart-icon">
+            </div>
+
+            <!-- HTML for the hovering cart icon -->
+            <div id="cart-icon-container">
+                <img class="cart-icon" id="hovering-cart-icon" src="Image/cart-icon.png" alt="Cart Icon">
+                <span id="cart-count">0</span> <!-- Cart item count -->
             </div>
 
             <!-- Cart Sidebar -->
@@ -155,5 +161,7 @@
 </footer>
 
 <script src="Js/main.js"></script>
+<script src="Js/promo_slider.js"></script>
+<script src="Js/cart.js"></script>
 </body>
 </html>
